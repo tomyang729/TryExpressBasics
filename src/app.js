@@ -6,8 +6,12 @@ var express = require('express'),
 
 var app = express();
 
+app.set('view engine', 'jade');
+app.set('views', __dirname + '/templates');
+
 app.get('/', function(req, res){
-	res.send('<h1>JavaScript is so interesting!</h1>');
+	//res.send('<h1>JavaScript is so interesting!</h1>');
+	res.render('index.jade');
 });
 
 app.get('/blog/:prop?', function(req, res){
@@ -15,8 +19,8 @@ app.get('/blog/:prop?', function(req, res){
 	if(prop === undefined){
 		res.send(posts);
 	}else{
-		var post = posts[prop];
-	    res.send(post);
+		var post = posts[prop] || {};
+	    res.render('post.jade', {post: post});
 	}
 });
 

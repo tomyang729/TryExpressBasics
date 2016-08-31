@@ -1,17 +1,23 @@
 {
-        "debug": "on",
+        "debug": {
+            "name": "inspector",
+            "status": "on",
+            "description": "sldkfjsldkjflsdkjflkjlkjsldkjflijekjlvklksfndkjvlaefnv"
+        },
         "window": {
             "title": "Sample Konfabulator Widget",
             "name": "main_window",
             "width": 500,
-            "height": 500
+            "height": 500,
+            "description": "sldkfjsldkjflsdkjflkjlkjsldkjflijekjlvklksfndkjvlaefnv"
         },
         "image": { 
             "src": "Images/Sun.png",
             "name": "sun1",
             "hOffset": 250,
             "vOffset": 250,
-            "alignment": "center"
+            "alignment": "center",
+            "description": "sldkfjsldkjflsdkjflkjlkjsldkjflijekjlvklksfndkjvlaefnv"
         },
         "text": {
             "data": "Click Here",
@@ -21,7 +27,8 @@
             "hOffset": 250,
             "vOffset": 100,
             "alignment": "center",
-            "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+            "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;",
+            "description": "sldkfjsldkjflsdkjflkjlkjsldkjflijekjlvklksfndkjvlaefnv"
         }
 
 } 
